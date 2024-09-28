@@ -1,0 +1,11 @@
+services:
+    react:
+        container_name: desafio-senneliquor-frontend
+        image: will871/node:dev
+        environment:
+            - REACT_APP_HOST_URL=http://localhost:8080/
+        volumes:
+            - .:/var/www/app
+        ports:
+            - 3000:3000
+        tty: true
