@@ -1,74 +1,7 @@
 export const LandingPage = () => {
-    return <>
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    Main<br />
-    </>;
+    return (
+        <>
+            
+        </>
+    );
 }
