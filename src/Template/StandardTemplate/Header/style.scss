@@ -1,0 +1,15 @@
+.standard_template {
+    &__header {
+        background-color: red;
+        height: 30vh;
+
+        &.--on_the_top {
+            background-color: transparent;
+            color: white;
+        }
+
+        &__nav {
+
+        }
+    }
+}

@@ -1,19 +1,41 @@
-import React from 'react';
+import { StrictMode } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from './Routes/App';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import 'react-toastify/dist/ReactToastify.css';
+import './Assets/Css/reset.css';
+import './Assets/Css/main.css';
+
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			staleTime: 1000 * 60 * 5,
+			refetchOnWindowFocus: false,
+			retry: 0
+		},
+		mutations: {
+			onError: (error) => {
+				console.error('Erro na mutação:', error);
+			},
+		},
+	},
+});
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+	<StrictMode>
+		<QueryClientProvider client={queryClient}>
+			<BrowserRouter>
+				<ToastContainer />
+				<App />
+			</BrowserRouter>
+		</QueryClientProvider>
+	</StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

@@ -1,0 +1,40 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+:root,
+* {
+    font-family: 'Open-Sans Regular';
+}
+
+body {
+    background-color: #fff;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+    font-family: 'Open-Sans Regular';
+    src: url(../Fonts/OpenSans/OpenSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans Regular';
+    font-weight: 600;
+    src: url(../Fonts/OpenSans/OpenSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans Regular';
+    font-weight: 700;
+    src: url(../Fonts/OpenSans/OpenSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans Regular';
+    font-weight: 800;
+    src: url(../Fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype');
+}
