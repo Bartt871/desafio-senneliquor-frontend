@@ -1,3 +1,10 @@
 .landing_page {
-    
+    &>.footer_extended {
+        height: 80px;
+        background-color: #B9BD5C;
+
+        @media screen and (max-width: 720px) {
+            height: 50px;
+        }
+    }
 }

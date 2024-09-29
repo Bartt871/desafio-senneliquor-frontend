@@ -1,0 +1,191 @@
+.lading_page_hospitals {
+    background-color: #EC6726;
+    padding-top: 5rem;
+
+    &>.title {
+        text-align: center;
+        color: #B9BD5C;
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    &>.map {
+        position: relative;
+        height: 80vh;
+
+        &>.iframe {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            & iframe {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &>.content {
+            max-width: 1160px;
+            margin: auto;
+            position: relative;
+
+            &>.wrap {
+                background: #fff;
+                width: 325px;
+                margin: 0;
+                padding: 0 40px;
+                position: relative;
+                transition: all .3ms ease;
+                height: 80vh;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+
+                &>.picture {
+                    padding-top: 40px;
+                    padding-bottom: 20px;
+
+                    &>img {
+                        width: 100%;
+                    }
+                }
+
+                &>.title {
+                    color: #EC6726;
+                    font-weight: 600;
+                    text-align: left;
+                    font-size: 2.5rem;
+                    margin-bottom: 1.5rem;
+
+                    &>.subtitle {
+                        font-family: 'Bariol Light';
+                        font-style: italic;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        color: black;
+                        opacity: .7;
+                    }
+                }
+
+                &>.description {
+                    opacity: .7;
+                    line-height: 1.7;
+                }
+
+                &>.opening_info {
+                    margin-top: auto;
+                    margin-bottom: 6rem;
+
+                    &>.title {
+                        color: #EC6726;
+                        font-weight: 600;
+                        text-align: left;
+                        font-size: 1.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    &>.opening {
+                        line-height: 2.5;
+
+                        &>:not(:last-child) {
+                            border-bottom: 1px solid rgba(0, 0, 0, .1);
+                        }
+
+                        &>.date {
+                            display: flex;
+
+                            &>.week_day {
+                                flex: 0 0 50%;
+                                font-weight: 600;
+                            }
+
+                            &>.hour {
+                                flex: 0 0 50%;
+                                opacity: .6;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>.social_networks {
+                position: absolute;
+                bottom: -50px;
+                display: flex;
+                width: 100%;
+                height: fit-content;
+                box-shadow: 0px 12px 47px 0px rgba(39, 71, 125, 0.07);
+
+                &>.logo {
+                    min-width: 325px;
+                    background-color: #eee;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+
+                &>.social_networks {
+                    max-width: calc(1160px - 325px);
+                    width: 100%;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 3rem;
+                    box-sizing: border-box;
+
+                    &>.title {
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                        font-weight: 600;
+
+                        & .--detail {
+                            color: #EC6726;
+                        }
+                    }
+
+                    &>.social_networks {
+                        color: #EC6726;
+                        display: flex;
+                        gap: 2rem;
+
+                        & a {
+                            color: inherit;
+                            transition: color .3s;
+
+                            &:hover {
+                                color: #B9BD5C;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            height: 50vh;
+
+            &>.content {
+                height: 50vh;
+
+                &>.social_networks {
+                    flex-direction: column;
+
+                    &>.social_networks {
+                        padding: 1rem;
+                        box-sizing: border-box;
+                        flex-direction: column;
+                    }
+                }
+
+                &>.wrap {
+                    display: none;
+                }
+            }
+        }
+    }
+}
