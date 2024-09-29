@@ -48,7 +48,7 @@ export const Header = () => {
         <>
             <header className={classNames('standard_template__header', { '--on_the_top': onTheTop })}>
                 <div className='logo'>
-                    <img src={Logo} />
+                    <img src={Logo} alt='logo' />
                 </div>
                 <div className='toggle'>
                     <button className='button' onClick={() => setNavIsOpen(prev => !prev)}>

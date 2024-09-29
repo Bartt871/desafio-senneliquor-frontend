@@ -7,7 +7,7 @@ export const Footer = () => {
         <>
             <footer className='standard_template__footer'>
                 <div className='logo'>
-                    <img src={Logo} />
+                    <img src={Logo} alt='logo-white' />
                 </div>
                 <div className='copy'>
                     &copy; 2024 - William Barreto. Todos os direitos reservados.
