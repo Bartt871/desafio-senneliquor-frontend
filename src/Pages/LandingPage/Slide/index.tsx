@@ -72,26 +72,22 @@ export const Slide = () => {
                 </button>
                 {slides.map((slide, index) => {
                     return (
-                        <>
-                            <div
-                                key={index}
-                                className={classNames('slide', { '--active': index === activeSlideIndex })}
-                            >
-                                <img src={slide.src} alt={slide.alt} />
-                            </div>
-                        </>
+                        <div
+                            key={index}
+                            className={classNames('slide', { '--active': index === activeSlideIndex })}
+                        >
+                            <img src={slide.src} alt={slide.alt} />
+                        </div>
                     );
                 })}
                 <div className='dots'>
                     {slides.map((slide, index) => {
                         return (
-                            <>
-                                <div
-                                    key={index}
-                                    className={classNames('dot', { '--active': index === activeSlideIndex })}
-                                    onClick={() => setActiveSlideIndex(index)}
-                                />
-                            </>
+                            <div
+                                key={index}
+                                className={classNames('dot', { '--active': index === activeSlideIndex })}
+                                onClick={() => setActiveSlideIndex(index)}
+                            />
                         );
                     })}
                 </div>
