@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,10 +12,11 @@ interface ISlide {
 }
 
 export const Slide = () => {
+    const intervalId = useRef<NodeJS.Timeout | undefined>(undefined);
+
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [autoSlide, setAutoSlide] = useState(true);
 
-    let intervalId: NodeJS.Timeout | undefined = undefined;
 
     const slides: ISlide[] = [
         { src: 'https://dummyimage.com/1920x1080/EC6726', alt: 'dummy' },
@@ -37,15 +38,15 @@ export const Slide = () => {
         });
     }
 
-    const startAutoSlide = () => {
-        intervalId = setInterval(() => {
+    const startAutoSlide = useCallback(() => {
+        intervalId.current = setInterval(() => {
             setActiveSlideIndex(prevIndex => (prevIndex + 1) % slides.length);
         }, 5000);
-    };
+    }, [slides.length]);
 
     const pauseAutoSlide = () => {
         setAutoSlide(false);
-        clearInterval(intervalId);
+        clearInterval(intervalId.current);
     };
 
     useEffect(() => {
@@ -53,8 +54,8 @@ export const Slide = () => {
             startAutoSlide();
         }
 
-        return () => clearInterval(intervalId);
-    }, [autoSlide, startAutoSlide, intervalId, slides.length]);
+        return () => clearInterval(intervalId.current);
+    }, [autoSlide, startAutoSlide]);
 
     return (
         <>
