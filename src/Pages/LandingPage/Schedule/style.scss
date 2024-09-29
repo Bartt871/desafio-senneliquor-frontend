@@ -1,0 +1,147 @@
+.landing_page_schedule {
+    background-image: url(../../../Assets/Images/Background/schedule-1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 128px 0;
+    position: relative;
+    margin-top: 4rem;
+
+    &::before {
+        background-color: rgba(rgb(35, 35, 35), 0.5);
+        display: block;
+        content: '\A';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    & .container {
+        position: relative;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        & .title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            & .subtitle {
+                margin-top: 1rem;
+                font-size: 14px;
+                font-family: 'Bariol Light';
+            }
+        }
+
+        & .action {
+            background-color: #EC6726;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: #D15D20;
+
+                & .icon {
+                    background-color: #EC6726;
+                }
+            }
+
+            & .content {
+                padding: .5rem 1.5rem;
+            }
+
+            & .icon {
+                background-color: #D15D20;
+                padding: .35rem .5rem;
+                transition: padding .3s;
+
+                &:hover {
+                    padding: .35rem .3rem .35rem .7rem;
+                }
+            }
+        }
+    }
+
+    & .top_separator {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        top: 0;
+        border-color: white;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: inherit;
+            border-width: 32px 0 0 50.1vw;
+            position: absolute;
+            z-index: 9;
+            bottom: -31px;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+        &::before {
+            right: 0;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+    }
+
+    & .bottom_separator {
+        content: '\A';
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        border-color: #EC6726;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: inherit;
+            border-width: 32px 0 0 50.1vw;
+            position: absolute;
+            bottom: 0;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            top: -31px;
+        }
+
+        &::before {
+            right: 0;
+        }
+
+        &::after {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+    }
+}

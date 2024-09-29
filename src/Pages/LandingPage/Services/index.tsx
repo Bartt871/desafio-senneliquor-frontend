@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './style.scss';
 import { faArrowRightLong, faKitMedical } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+
+import './style.scss';
 
 export const Services = () => {
     return (
