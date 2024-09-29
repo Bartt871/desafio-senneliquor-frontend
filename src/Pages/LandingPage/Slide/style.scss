@@ -1,0 +1,100 @@
+.landing_page_slide {
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    & .prev,
+    & .next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20%;
+        border: none;
+        background: transparent;
+        opacity: .3;
+        transition: opacity .3s;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    & .prev {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0) 75%);
+    }
+
+    & .next {
+        right: 0;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0) 75%);
+    }
+
+
+    & .dots {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        gap: .5rem;
+        padding: 0 .1rem .5rem .1rem;
+        box-sizing: border-box;
+        z-index: 2;
+
+        & .dot {
+            width: 100%;
+            height: 5px;
+            border-radius: 2px;
+            background-color: rgb(204, 204, 204);
+            transition: background-color .3s;
+            position: relative;
+            cursor: pointer;
+
+            &.--active {
+                background-color: darken(rgb(204, 204, 204), 20);
+            }
+
+            &:hover {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+
+                &::before {
+                    top: -5px;
+                }
+            }
+
+            &::before {
+                content: '\A';
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                background-color: inherit;
+                transition: inherit;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                top: 0;
+                transition: top .3s;
+            }
+        }
+    }
+
+    & .slide {
+        width: 100%;
+        height: 0vh;
+        opacity: 0;
+        transition: opacity .5s;
+        display: flex;
+        justify-content: center;
+
+        & img {
+            max-width: 100%;
+        }
+
+        &.--active {
+            opacity: 1;
+            height: fit-content;
+        }
+    }
+}

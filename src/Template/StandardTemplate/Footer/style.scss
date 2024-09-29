@@ -1,17 +1,18 @@
 .standard_template__footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     height: 4.5vh;
     width: 100%;
-    background-color: rgb(176, 187, 103);
+    background-color: #B9BD5C;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
     box-sizing: border-box;
+    z-index: 110;
 
     & .logo img {
-        height: 4.5vh;
+        height: calc(4.5vh - 1px);
     }
 
     & .copy {
