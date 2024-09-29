@@ -15,7 +15,7 @@ export const Slide = () => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [autoSlide, setAutoSlide] = useState(true);
 
-    let intervalId: NodeJS.Timeout;
+    let intervalId: NodeJS.Timeout | undefined = undefined;
 
     const slides: ISlide[] = [
         { src: 'https://dummyimage.com/1920x1080/EC6726', alt: 'dummy' },
@@ -54,7 +54,7 @@ export const Slide = () => {
         }
 
         return () => clearInterval(intervalId);
-    }, [autoSlide, slides.length]);
+    }, [autoSlide, startAutoSlide, intervalId, slides.length]);
 
     return (
         <>
