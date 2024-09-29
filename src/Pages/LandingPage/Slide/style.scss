@@ -32,6 +32,10 @@
         background: linear-gradient(270deg, rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0) 75%);
     }
 
+    &:not(:hover) .dots .dot.--active::before {
+        width: 100%;
+        transition: width 5s;
+    }
 
     & .dots {
         display: flex;
@@ -48,34 +52,25 @@
             height: 5px;
             border-radius: 2px;
             background-color: rgb(204, 204, 204);
-            transition: background-color .3s;
+            transition: background-color .3s, height .3s;
             position: relative;
             cursor: pointer;
 
             &.--active {
-                background-color: darken(rgb(204, 204, 204), 20);
-            }
-
-            &:hover {
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
+                height: 10px;
 
                 &::before {
-                    top: -5px;
                 }
             }
 
             &::before {
                 content: '\A';
                 position: absolute;
-                width: inherit;
+                width: 0;
+                background-color: darken(rgb(204, 204, 204), 30);
                 height: inherit;
-                background-color: inherit;
-                transition: inherit;
                 border-top-left-radius: 2px;
                 border-top-right-radius: 2px;
-                top: 0;
-                transition: top .3s;
             }
         }
     }

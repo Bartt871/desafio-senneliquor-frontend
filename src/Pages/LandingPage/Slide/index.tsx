@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,6 +13,9 @@ interface ISlide {
 
 export const Slide = () => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const [autoSlide, setAutoSlide] = useState(true);
+
+    let intervalId: NodeJS.Timeout;
 
     const slides: ISlide[] = [
         { src: 'https://dummyimage.com/1920x1080/EC6726', alt: 'dummy' },
@@ -27,28 +30,39 @@ export const Slide = () => {
     const handleChangeSlide = (direction: 'prev' | 'next') => {
         setActiveSlideIndex(prev => {
             if (direction === 'prev') {
-                const nextSlideIndex = prev - 1;
-
-                if (nextSlideIndex < 0) {
-                    return slides.length - 1;
-                }
-
-                return nextSlideIndex;
+                return prev === 0 ? slides.length - 1 : prev - 1;
             }
 
-            const nextSlideIndex = prev + 1;
-
-            if (nextSlideIndex > (slides.length - 1)) {
-                return 0;
-            }
-
-            return nextSlideIndex;
+            return prev === slides.length - 1 ? 0 : prev + 1;
         });
     }
 
+    const startAutoSlide = () => {
+        intervalId = setInterval(() => {
+            setActiveSlideIndex(prevIndex => (prevIndex + 1) % slides.length);
+        }, 5000);
+    };
+
+    const pauseAutoSlide = () => {
+        setAutoSlide(false);
+        clearInterval(intervalId);
+    };
+
+    useEffect(() => {
+        if (autoSlide) {
+            startAutoSlide();
+        }
+
+        return () => clearInterval(intervalId);
+    }, [autoSlide, slides.length]);
+
     return (
         <>
-            <div className='landing_page_slide'>
+            <div
+                className='landing_page_slide'
+                onMouseEnter={pauseAutoSlide}
+                onMouseLeave={() => setAutoSlide(true)}
+            >
                 <button className='prev' onClick={() => handleChangeSlide('prev')}>
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
