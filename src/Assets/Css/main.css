@@ -4,7 +4,7 @@
 
 :root,
 * {
-    font-family: 'Open-Sans Regular';
+    font-family: 'Bariol';
     font-size: 14px;
 }
 
@@ -18,24 +18,54 @@ button {
 }
 
 @font-face {
-    font-family: 'Open-Sans Regular';
-    src: url(../Fonts/OpenSans/OpenSans-Regular.ttf) format('truetype');
+    font-family: 'Bariol';
+    src: url(../Fonts/Bariol/Bariol-Regular.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Open-Sans Regular';
+    font-family: 'Bariol';
+    font-style: italic;
+    src: url(../Fonts/Bariol/Bariol-RegularItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bariol';
+    font-weight: 500;
+    src: url(../Fonts/Bariol/Bariol-Thin.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bariol';
+    font-weight: 500;
+    font-style: italic;
+    src: url(../Fonts/Bariol/Bariol-ThinItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bariol';
     font-weight: 600;
-    src: url(../Fonts/OpenSans/OpenSans-SemiBold.ttf) format('truetype');
+    src: url(../Fonts/Bariol/Bariol-Bold.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Open-Sans Regular';
-    font-weight: 700;
-    src: url(../Fonts/OpenSans/OpenSans-Bold.ttf) format('truetype');
+    font-family: 'Bariol';
+    font-weight: 600;
+    font-style: italic;
+    src: url(../Fonts/Bariol/Bariol-BoldItalic.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Open-Sans Regular';
-    font-weight: 800;
-    src: url(../Fonts/OpenSans/OpenSans-ExtraBold.ttf) format('truetype');
+    font-family: 'Bariol Light';
+    src: url(../Fonts/Bariol/Bariol-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bariol light';
+    font-style: italic;
+    src: url(../Fonts/Bariol/Bariol-LightItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Dancing-Script';
+    src: url(../Fonts/DancingScript/DancingScript.woff2) format('truetype');
 }
