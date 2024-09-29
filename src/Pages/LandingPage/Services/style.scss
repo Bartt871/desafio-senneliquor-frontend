@@ -1,0 +1,155 @@
+.landing_page_services {
+
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    &>.title {
+        text-align: center;
+        color: #B9BD5C;
+        font-size: 3rem;
+
+        & .subtitle {
+            font-size: 1.5rem;
+            color: #EC6726;
+            font-family: 'Dancing-Script';
+        }
+    }
+
+    &>.description {
+        text-align: center;
+        font-style: italic;
+        opacity: .7;
+        box-sizing: border-box;
+        width: 40%;
+
+        @media screen and (max-width: 720px) {
+            width: 90%;
+        }
+    }
+
+    &>.services {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        & .service {
+            flex: 0 0 20%;
+            padding: 1.5rem;
+            box-sizing: border-box;
+            border: 2px solid rgba(#ABB056, .5);
+            border-radius: 10px;
+            transition: border-color .5s, box-shadow .5s, flex .3s;
+            position: relative;
+
+            &:hover {
+                border-color: #B9BD5C;
+                box-shadow: 0px 12px 47px 0px rgba(39, 71, 125, 0.07);
+
+                & .image {
+                    & .img .overlay {
+                        top: 0;
+                    }
+
+                    & .icon {
+                        background-color: #B9BD5C;
+                    }
+                }
+            }
+
+            & .image {
+                position: relative;
+                margin-bottom: 45px;
+
+                & .img {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+
+                    & img {
+                        width: 100%;
+                    }
+
+                    & .overlay {
+                        position: absolute;
+                        top: 100%;
+                        height: 100%;
+                        width: 100%;
+                        background: #B9BD5C;
+                        background: linear-gradient(6deg, rgba(#B9BD5C, 1) 0%, rgba(255, 255, 255, 0) 75%);
+                        border-radius: 10px;
+                        transition: .3s;
+                    }
+                }
+
+                & .icon {
+                    color: white;
+                    position: absolute;
+                    bottom: -45px;
+                    background-color: #ABB056;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border: 10px solid white;
+                    transition: background-color .3s;
+                }
+            }
+
+            & .title {
+                font-size: 20px;
+                padding: 0 10%;
+                box-sizing: border-box;
+                text-align: center;
+                line-height: 1.3;
+                margin: 0 0 15px 0;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                & a {
+                    color: #ABB056;
+                    transition: color .3s;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #B9BD5C;
+                    }
+                }
+            }
+
+            & .description {
+                text-align: center;
+                line-height: 1.7;
+                font-size: 16px;
+                opacity: .7;
+            }
+
+            & .action {
+                position: absolute;
+                bottom: -22px;
+                background-color: #B9BD5C;
+                color: white;
+                padding: 1rem;
+                border-radius: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: none;
+            }
+
+            @media screen and (max-width: 1300px) {
+                flex: 0 0 30%;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            flex-direction: column;
+            padding: 1rem;
+
+            & .service {
+                flex: unset;
+            }
+        }
+    }
+}

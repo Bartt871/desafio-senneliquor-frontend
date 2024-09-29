@@ -1,3 +1,4 @@
+import { Services } from './Services';
 import { Slide } from './Slide';
 
 import './style.scss';
@@ -7,7 +8,17 @@ export const LandingPage = () => {
         <>
             <div className='landing_page'>
                 <Slide />
-                Teste
+                <Services />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
+                Main <br />
             </div>
         </>
     );
