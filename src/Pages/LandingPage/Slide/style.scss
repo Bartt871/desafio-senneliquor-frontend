@@ -33,8 +33,11 @@
     }
 
     &:not(:hover) .dots .dot.--active::before {
-        width: 100%;
-        transition: width 5s;
+        animation: dotTimer 5s linear forwards;
+        /**
+         * Necessário usar animação por conta do primeiro loader já vir com --active
+         * Consequentemente, o primeiro load, o loader já vinha com width: 100%
+         */
     }
 
     & .dots {
@@ -56,11 +59,9 @@
             position: relative;
             cursor: pointer;
 
-            &.--active {
+            &.--active,
+            &:hover {
                 height: 10px;
-
-                &::before {
-                }
             }
 
             &::before {
@@ -69,8 +70,7 @@
                 width: 0;
                 background-color: darken(rgb(204, 204, 204), 30);
                 height: inherit;
-                border-top-left-radius: 2px;
-                border-top-right-radius: 2px;
+                border-radius: inherit;
             }
         }
     }
@@ -91,5 +91,15 @@
             opacity: 1;
             height: fit-content;
         }
+    }
+}
+
+@keyframes dotTimer {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
     }
 }
