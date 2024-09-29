@@ -124,14 +124,15 @@
                 line-height: 1.7;
                 font-size: 16px;
                 opacity: .7;
+                padding-bottom: 1.5rem;
             }
 
             & .action {
                 position: absolute;
-                bottom: -22px;
+                bottom: -25px;
                 background-color: #B9BD5C;
                 color: white;
-                padding: 1rem;
+                padding: 1.2rem;
                 border-radius: 50%;
                 left: 50%;
                 transform: translateX(-50%);
