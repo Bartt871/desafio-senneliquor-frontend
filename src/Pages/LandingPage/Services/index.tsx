@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightLong, faKitMedical } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightLong, faKitMedical, faTruckMedical, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 import './style.scss';
@@ -26,7 +26,7 @@ export const Services = () => {
                                 <div className='overlay' />
                             </div>
                             <div className='icon'>
-                                <FontAwesomeIcon icon={faKitMedical} size='3x' />
+                                <FontAwesomeIcon icon={faUserDoctor} size='3x' />
                             </div>
                         </div>
                         <div className="title">
@@ -72,7 +72,7 @@ export const Services = () => {
                                 <div className='overlay' />
                             </div>
                             <div className='icon'>
-                                <FontAwesomeIcon icon={faKitMedical} size='3x' />
+                                <FontAwesomeIcon icon={faTruckMedical} size='3x' />
                             </div>
                         </div>
                         <div className="title">
