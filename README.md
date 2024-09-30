@@ -1,4 +1,4 @@
-[__TOC__]
+[[_TOC_]]
 
 ## Como Subit o Projeto
 
@@ -6,7 +6,7 @@ Para efetuar o login, é necessário seguir os passos do projeto [backend](https
 
 ### Requisitos:
 
- - Docker;
+ - Docker
  - Make
 
 ### Passos
