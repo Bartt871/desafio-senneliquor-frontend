@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 ## Como Subir o Projeto
 
 Para efetuar o login, é necessário seguir os passos do projeto [backend](https://gitlab.com/will871/desafio-senneliquor).
