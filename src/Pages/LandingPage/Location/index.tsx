@@ -18,12 +18,13 @@ export const Location = () => {
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14629.977920773632!2d-46.6598597!3d-23.5506778!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59bcb25cefe1%3A0x27bd7932498100f7!2sSenne%20Liquor%20Diagn%C3%B3stico%20-%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1727647362431!5m2!1spt-BR!2sbr"
                             loading="lazy"
+                            title='Google Maps'
                         />
                     </div>
                     <div className='content'>
                         <div className='wrap'>
                             <div className='picture'>
-                                <img src='https://dummyimage.com/1920x1080' alt='picture' />
+                                <img src='https://dummyimage.com/1920x1080' alt='dummy' />
                             </div>
                             <div className='title'>
                                 Senne Liquor

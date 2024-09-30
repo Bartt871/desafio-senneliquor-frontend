@@ -67,7 +67,7 @@ export const Header = () => {
                             <Link to={'#'}>Serviços</Link>
                         </li>
                         <li className='item'>
-                            <Link to={'#'}>Área do Doutor</Link>
+                            <Link to={'/doctor-login'}>Área do Doutor</Link>
                         </li>
                     </ul>
                 </nav>

@@ -1,0 +1,39 @@
+$success: #28a745;
+$warning: #ffc107;
+$danger: #E95C6D;
+$info: #17a2b8;
+$primary: #B9BD5C;
+$primaryDark: #ABB056;
+$secondary: #EC6726;
+$secondaryLight: #F3953F;
+$secondaryDark: #D15D20;
+$unabled: #DADADA;
+$unabledDark: #C6C6C6;
+
+$colors: (
+    'success': $success,
+    'warning': $warning,
+    'danger': $danger,
+    'info': $info,
+    'primary': $primary,
+    'primary--dark': $primaryDark,
+    'secondary': $secondary,
+    'secondary--light': $secondaryLight,
+    'secondary--dark': $secondaryDark,
+    'unabled': $unabled,
+    'unabled--dark': $unabledDark
+);
+
+$colorsHover: (
+    'success': darken($success, 15),
+    'warning': darken($warning, 15),
+    'danger': darken($danger, 15),
+    'info': darken($info, 15),
+    'primary': darken($primary, 15),
+    'primary--dark': lighten($primaryDark, 15),
+    'secondary': darken($secondary, 15),
+    'secondary--light': darken($secondaryLight, 15),
+    'secondary--dark': lighten($secondaryDark, 15),
+    'unabled': darken($unabled, 15),
+    'unabled--dark': lighten($unabledDark, 15),
+)

@@ -1,0 +1,56 @@
+.doctor_home_tasks {
+    background-color: #e6ecf8;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    &>header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        & .title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        & input:not([type=checkbox]) {
+            border: solid 1px #bcc2ce;
+            background-color: #fff;
+            color: #333333;
+            font-size: 18px;
+            height: 35px;
+            padding: 0 10px;
+            border-radius: 3px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+            border: solid 1px #bcc2ce;
+            outline: none;
+
+            &:focus {
+                border-color: #B9BD5C;
+                z-index: 2;
+                outline: 0;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(#B9BD5C, .6);
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            flex-direction: column;
+        }
+    }
+
+    &>.tasks {
+        grid-template-columns: repeat(4, minmax(0px, 1fr));
+        display: grid;
+        gap: 1.5rem;
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: repeat(2, minmax(0px, 1fr));
+        }
+
+        @media screen and (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
